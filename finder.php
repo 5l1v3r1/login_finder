@@ -4,7 +4,6 @@
 // contact here : mrcakil@programmer.net
 // and here : N1ghtpe0ple@protonmail.com
 // Facebook : Putra AR (id = N1ghtpe0ple)
-// greetz : IndoXploit - AnonCyberTeam - 99syndicate
 
 $blue="\033[1;34";
 $cyan="\033[1;36m";
@@ -36,14 +35,16 @@ print "$purple
 echo "$lightgreen 
 [?]==// Target (Without http://) >> $white";
 $target = trim(fgets(STDIN));
-$list = "list.txt";
+echo "$lightgreen
+[?]==// List >> $white";
+$list = trim(fgets(STDIN));
 if(!preg_match("/^http:\/\//",$target) AND !preg_match("/^https:\/\//",$target)){
 	$targetnya = "http://$target";
 }else{
 	$targetnya = $target;
 }
 echo "$yellow
-[!]==// List ada di $list ";
+[!]==// Opening $list ...';
 $buka = fopen("$list","r");
 $ukuran = filesize("$list");
 $baca = fread($buka,$ukuran);
