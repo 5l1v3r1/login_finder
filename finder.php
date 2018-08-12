@@ -72,6 +72,6 @@ foreach($lists as $login){
 }
 echo "$lightgreen
 
-[!]==// Result ada di result.txt\n\n";
+[!]==// Result ada di result.txt\n\n $white ";
   
 ?>
