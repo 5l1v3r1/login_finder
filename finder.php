@@ -5,6 +5,7 @@
 // and here : N1ghtpe0ple@protonmail.com
 // Facebook : Putra AR (id = N1ghtpe0ple)
 
+@system("clear");
 $blue="\033[1;34";
 $cyan="\033[1;36m";
 $green="\033[1;34m";
