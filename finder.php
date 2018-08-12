@@ -36,8 +36,7 @@ print "$purple
 echo "$lightgreen 
 [?]==// Target (Without http://) >> $white";
 $target = trim(fgets(STDIN));
-echo "$lightgreen
-[?]==// List >> $white";
+echo "$lightgreen [?]==// List >> $white";
 $list = trim(fgets(STDIN));
 if(!preg_match("/^http:\/\//",$target) AND !preg_match("/^https:\/\//",$target)){
 	$targetnya = "http://$target";
@@ -45,7 +44,7 @@ if(!preg_match("/^http:\/\//",$target) AND !preg_match("/^https:\/\//",$target))
 	$targetnya = $target;
 }
 echo "$yellow
-[!]==// Opening $list ...';
+[!]==// Opening $list ...";
 $buka = fopen("$list","r");
 $ukuran = filesize("$list");
 $baca = fread($buka,$ukuran);
@@ -71,5 +70,8 @@ foreach($lists as $login){
 		print "\n$red  [".date('H:m:s')."]==//$white $log =>$red Tidak Ditemukan";
 	}
 }
+echo "$lightgreen
+
+[!]==// Result ada di result.txt\n\n";
   
 ?>
