@@ -36,8 +36,18 @@ print "$purple
 echo "$lightgreen 
 [?]==// Target (Without http://) >> $white";
 $target = trim(fgets(STDIN));
-echo "$lightgreen [?]==// List >> $white";
-$list = trim(fgets(STDIN));
+echo "$lightgreen [?]==// Use Default list (Y/N)?\n [+]==>> ";
+$pilihan = trim(fgets(STDIN));
+
+if ($pilihan == 'Y' OR $pilihan == 'y')
+{
+	$list = "list.txt";
+}
+else
+{
+	echo "$lightgreen [?]==// List >> $white";
+	$list = trim(fgets(STDIN));
+}
 if(!preg_match("/^http:\/\//",$target) AND !preg_match("/^https:\/\//",$target)){
 	$targetnya = "http://$target";
 }else{
