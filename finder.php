@@ -73,7 +73,7 @@ foreach($lists as $login){
 	$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 	curl_close($ch);
 	if($httpcode == 200){
-		 $handle = fopen("result.txt", "a+");
+		 $handle = fopen("$target.txt", "a+");
 		fwrite($handle, "$log\n");
 		print "\n$okegreen  [".date('H:m:s')."]==//$white $log =>$okegreen Ditemukan";
 	}else{
@@ -82,6 +82,6 @@ foreach($lists as $login){
 }
 echo "$lightgreen
 
-[!]==// Result ada di result.txt\n\n $white ";
+[!]==// Result ada di $target\n\n $white ";
   
 ?>
