@@ -1,6 +1,6 @@
 <?php
 // Author Name : Mr.cakil
-// Information List : 4001 list
+// Information List : 7339 list
 // contact here : mrcakil@programmer.net
 // and here : N1ghtpe0ple@protonmail.com
 // Facebook : Putra AR (id = N1ghtpe0ple)
@@ -23,7 +23,7 @@ print "$purple
 [!]==============================================[!]
 [!]==//$yellow  Author$red   >>$okegreen  Mr.cakil$purple               //==[!]
 [!]==//$yellow  Recoder$red  >>$okegreen  N1ght.Hax0r$purple            //==[!]
-[!]==//$yellow  List$red     >>$okegreen  4001 list$red ($yellow Updated$red )$purple  //==[!]
+[!]==//$yellow  List$red     >>$okegreen  7339 list$red ($yellow Updated$red )$purple  //==[!]
 [!]==============================================[!]
 [!]==||$yellow              Thanks to$purple               ||==[!]
 [!]==============================================[!]
@@ -82,6 +82,6 @@ foreach($lists as $login){
 }
 echo "$lightgreen
 
-[!]==// Result ada di $target\n\n $white ";
+[!]==// Result ada di $target.txt\n\n $white ";
   
 ?>
