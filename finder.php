@@ -1,9 +1,4 @@
 <?php
-// Author Name : Mr.cakil
-// Information List : 7339 list
-// contact here : mrcakil@programmer.net
-// and here : N1ghtpe0ple@protonmail.com
-// Facebook : Putra AR (id = N1ghtpe0ple)
 
 @system("clear");
 $blue="\033[1;34";
