@@ -1,5 +1,6 @@
 <?php
 
+@system("mkdir result");
 @system("clear");
 $blue="\033[1;34";
 $cyan="\033[1;36m";
@@ -19,12 +20,12 @@ print "$cyan
  |_____|___|_  |_|_|_|  |__|  |_|_|_|___|___|_|  
            |___|                                 
 
-$white ==============================[$yellow Ver.2.5$white ]=======
+$white ==============================[$yellow Ver.3.0$white ]========
 
 $okegreen By$red   :$white N1ght.Hax0r
 $okegreen List$red :$white 7339 list
 
-$white ==============[$yellow IT Sharing Group$white ]==============
+$white ==============[$yellow Code Your Freedom$white ]==============
 
 $okegreen 01$red :$white Find login panel
 $okegreen 02$red :$white Brute login
@@ -35,9 +36,9 @@ $okegreen Menu$red >$white ";
 $menu = trim(fgets(STDIN));
 if ($menu == '01' OR $menu == '1')
 	{
-		echo "$okegreen \n Target (Without http://)$red >$white ";
+		echo "$cyan Target$red >$white ";
 		$target = trim(fgets(STDIN));
-		echo "$okegreen Use Default List (Y/N)?$red  >$white ";
+		echo "$cyan Use Default List (Y/N)?$red  >$white ";
 		$pilihan = trim(fgets(STDIN));
 
 		if ($pilihan == 'Y' OR $pilihan == 'y')
@@ -63,7 +64,7 @@ if ($menu == '01' OR $menu == '1')
 		$baca = fread($buka,$ukuran);
 		$lists = explode("\r\n",$baca);
 
-		echo "$okegreen\n [!]==// Please Wait...
+		echo "$cyan\n [!]==// Please Wait...
 		";
 
 		foreach($lists as $login)
@@ -75,16 +76,17 @@ if ($menu == '01' OR $menu == '1')
 				curl_exec($ch);
 				$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 				curl_close($ch);
-				if($httpcode == 200)
-					{
-						$handle = fopen("$target.txt", "a+");
-						fwrite($handle, "$log\n");
-						print "\n$okegreen  [".date('H:m:s')."]==//$white $log =>$okegreen OK";
-					}
-				else
-					{
-						print "\n$red  [".date('H:m:s')."]==//$white $log =>$red ERROR";
-					}
+				if($httpcode == 200){
+                    $handle = fopen("result/adlog-$target.txt", "a+");
+                    fwrite($handle, "$log\n");
+                    print "\n$cyan  [".date('H:m:s')."]==//$white $log =>$cyan OK";
+                }
+            	elseif($httpcode == 403){
+                    print "\n$red  [".date('H:m:s')."]==//$white $log =>$red FORBIDDEN";
+                }
+            	else{
+                    print "\n$red  [".date('H:m:s')."]==//$white $log =>$red ERROR";
+                }
 			}
 		echo "$lightgreen
 
@@ -99,13 +101,6 @@ if ($menu == '02' OR $menu == '2')
  |   --| . |     | |   | . |  |__   | . | . |   |
  |_____|___|_|_|_|_|_|_|_  |  |_____|___|___|_|_|
                        |___|                     
-
-$white";
-	}
-
-if ($menu == '02' OR $menu == '2')
-	{
-		print "
 
 $white";
 	}
