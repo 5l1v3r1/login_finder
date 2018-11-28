@@ -77,16 +77,16 @@ if ($menu == '01' OR $menu == '1')
 				$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 				curl_close($ch);
 				if($httpcode == 200){
-                    $handle = fopen("result/adlog-$target.txt", "a+");
-                    fwrite($handle, "$log\n");
-                    print "\n$cyan  [".date('H:m:s')."]==//$white $log =>$cyan OK";
-                }
-            	elseif($httpcode == 403){
-                    print "\n$red  [".date('H:m:s')."]==//$white $log =>$red FORBIDDEN";
-                }
-            	else{
-                    print "\n$red  [".date('H:m:s')."]==//$white $log =>$red ERROR";
-                }
+					$handle = fopen("result/adlog-$target.txt", "a+");
+					fwrite($handle, "$log\n");
+					print "\n$cyan  [".date('H:m:s')."]==//$white $log =>$cyan OK";
+				}
+				elseif($httpcode == 403){
+					print "\n$red  [".date('H:m:s')."]==//$white $log =>$red FORBIDDEN";
+				}
+				else{
+					print "\n$red  [".date('H:m:s')."]==//$white $log =>$red ERROR";
+				}
 			}
 		echo "$lightgreen
 
